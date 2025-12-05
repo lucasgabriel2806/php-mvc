@@ -2,13 +2,13 @@
 
 include 'Controller/PessoaController.php';
 
-// Pegando a url
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($url)
 {
+
     case '/':
-        echo "página inicial";
+        echo "Página inicial";
     break;
 
     case '/pessoa':
@@ -25,7 +25,8 @@ switch($url)
 
     default:
         echo "Erro 404";
-    break;
+    break; 
+
 }
 
-// C - processar a requisição do usuario
+?>

@@ -29,12 +29,15 @@
         <form method="post" action="/pessoa/form/save">
 
             <label for="nome">Nome:</label>
+
             <input id="nome" name="nome" type="text">
-
+            
             <label for="cpf">CPF:</label>
-            <input id="cpf" name="cpf" type="number">
 
-            <label for="data_nascimento">Data Nascimento:</label>
+            <input id="cpf" name="cpf" type="number">
+            
+            <label for="data_nascimento">Data de Nascimento:</label>
+
             <input id="data_nascimento" name="data_nascimento" type="date">
 
             <button type="submit">Salvar</button>
@@ -43,8 +46,6 @@
 
     </fieldset>
 
-
-    
 </body>
 
 </html>
