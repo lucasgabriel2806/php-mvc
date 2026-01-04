@@ -25,8 +25,6 @@ class PessoaModel
      */
     public function save()
     {
-        include 'DAO/PessoaDAO.php'; // Incluíndo o arquivo DAO
-
         // Instância do objeto e conexão no banco de dados via construtor
         $dao = new PessoaDAO(); 
 
@@ -51,9 +49,7 @@ class PessoaModel
      * $rows será acessada e possibilitará listar os registros vindos do banco de dados
      */
     public function getAllRows()
-    {
-        include 'DAO/PessoaDAO.php'; // Incluíndo o arquivo DAO
-        
+    {        
         // Instância do objeto e conexão no banco de dados via construtor
         $dao = new PessoaDAO();
 
@@ -70,8 +66,6 @@ class PessoaModel
      */
     public function getById(int $id)
     {
-        include 'DAO/PessoaDAO.php'; // Incluíndo o arquivo DAO
-
         $dao = new PessoaDAO();
 
         $obj = $dao->selectById($id); // Obtendo um model preenchido da camada DAO
@@ -95,8 +89,6 @@ class PessoaModel
      */
     public function delete(int $id)
     {
-        include 'DAO/PessoaDAO.php'; // Incluíndo o arquivo DAO
-
         $dao = new PessoaDAO();
 
         $dao->delete($id);

@@ -15,10 +15,7 @@ class PessoaController
      * Para saber mais sobre métodos estáticos, leia: https://www.php.net/manual/pt_BR/language.oop5.static.php
      */
     public static function index()
-    {
-        // Para saber mais sobre include , leia: https://www.php.net/manual/pt_BR/function.include.php
-        include 'Model/PessoaModel.php'; // inclusão do arquivo model.
-        
+    {        
         $model = new PessoaModel(); // Instância da Model
         $model->getAllRows(); // Obtendo todos os registros, abastecendo a propriedade $rows da model.
 
@@ -31,7 +28,6 @@ class PessoaController
      */
     public static function form()
     {
-        include 'Model/PessoaModel.php'; // inclusão do arquivo model.
         $model = new PessoaModel();
 
         if(isset($_GET['id'])) // Verificando se existe uma variável $_GET
@@ -47,8 +43,6 @@ class PessoaController
      */
     public static function save()
     {
-       include 'Model/PessoaModel.php'; // inclusão do arquivo model.
-
        // Abaixo cada propriedade do objeto sendo abastecida com os dados informados
        // pelo usuário no formulário (note o envio via POST)
        $model = new PessoaModel();
@@ -69,8 +63,6 @@ class PessoaController
      */
     public static function delete()
     {
-        include 'Model/PessoaModel.php'; // inclusão do arquivo model.
-
         $model = new PessoaModel();
 
         $model->delete( (int) $_GET['id'] ); // Enviando a variável $_GET como inteiro para o método delete
