@@ -2,9 +2,13 @@
 
 spl_autoload_register(function ($nome_da_classe) {
 
-    // echo "Include de: " . $nome_da_classe;
+    echo "Include de: " . $nome_da_classe . "<br />";
 
-    $classe_controller = 'Controller/' . $nome_da_classe . '.php';
+    // echo dirname(__FILE__);
+
+    include '../' . $nome_da_classe . '.php';
+
+    /*$classe_controller = 'Controller/' . $nome_da_classe . '.php';
     $classe_model = 'Model/' . $nome_da_classe . '.php';
     $classe_dao = 'DAO/' . $nome_da_classe . '.php';
 
@@ -20,7 +24,6 @@ spl_autoload_register(function ($nome_da_classe) {
 
         include $classe_dao;
 
-    }
+    }*/
 
-    // include 'classes/' . $nome_da_classe . '.class.php';
 });

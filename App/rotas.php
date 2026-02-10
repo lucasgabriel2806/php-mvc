@@ -1,5 +1,7 @@
 <?php
 
+use App\Controller\PessoaController;
+
 // include 'Controller/PessoaController.php';
 
 // Para saber mais sobre a função parse_url: https://www.php.net/manual/pt_BR/function.parse-url.php
